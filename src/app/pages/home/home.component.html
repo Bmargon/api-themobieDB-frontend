@@ -1,0 +1,155 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">PeliculasAPP</h1>
+        <p class="lead">Esta es una aplicación de películas</p>
+    </div>
+</div>
+
+<div class="container">
+    <br>
+
+    <h1>Cartelera actual</h1>
+    <hr>
+
+    <div class="row">
+
+        <div class="col-sm-6">
+
+
+            <div class="row" [routerLink]="['/pelicula', cartelera[0].id]">
+                <div class="col-md-12 div-pic-1" [ngStyle]="{ 'background-image': 'url( '+ (cartelera[0].backdrop_path | imagen) +')' }">
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                <div [routerLink]="['/pelicula', cartelera[1].id]" class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url( '+ (cartelera[1].poster_path | imagen) +')' }">
+                </div>
+                <div [routerLink]="['/pelicula', cartelera[2].id]" class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url( '+ (cartelera[2].poster_path | imagen) +')' }">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-6">
+
+
+            <div class="row">
+                <div [routerLink]="['/pelicula', cartelera[3].id]" class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url( '+ (cartelera[3].poster_path | imagen) +')' }">
+                </div>
+                <div [routerLink]="['/pelicula', cartelera[4].id]" class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url( '+ (cartelera[4].poster_path | imagen) +')' }">
+                </div>
+            </div>
+
+            <div class="row">
+                <div [routerLink]="['/pelicula', cartelera[5].id]" class="col-md-12 div-pic-1" [ngStyle]="{ 'background-image': 'url( '+ (cartelera[5].poster_path | imagen) +')' }">
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <div class="container">
+        <br>
+
+        <h1>Populares</h1>
+        <hr>
+
+        <div class="row">
+
+            <div class="col-sm-6">
+
+
+                <div class="row">
+                    <div [routerLink]="['/pelicula', populares[0].id]" class="col-md-12 div-pic-1" [ngStyle]="{ 'background-image': 'url( '+ (populares[0].backdrop_path | imagen) +')' }">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div [routerLink]="['/pelicula', populares[1].id]" class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url( '+ (populares[1].poster_path | imagen) +')' }">
+                    </div>
+                    <div [routerLink]="['/pelicula', populares[2].id]" class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url( '+ (populares[2].poster_path | imagen) +')' }">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6">
+
+
+                <div class="row">
+                    <div [routerLink]="['/pelicula', populares[3].id]" class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url( '+ (populares[3].poster_path | imagen) +')' }">
+                    </div>
+                    <div [routerLink]="['/pelicula', populares[4].id]" class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url( '+ (populares[4].poster_path | imagen) +')' }">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div [routerLink]="['/pelicula', populares[5].id]" class="col-md-12 div-pic-1" [ngStyle]="{ 'background-image': 'url( '+ (populares[5].poster_path | imagen) +')' }">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </div>
+    <div class="container">
+        <br>
+
+        <h1>Para niños </h1>
+        <hr>
+
+        <div class="row">
+
+            <div class="col-sm-6">
+
+                <div class="row">
+                    <div [routerLink]="['/pelicula', ninnos[0].id]" class="col-md-12 div-pic-1" [ngStyle]="{  'background-image': 'url( '+ (ninnos[0].backdrop_path | imagen) +')' }">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div [routerLink]="['/pelicula', ninnos[1].id]" class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url( '+ (ninnos[1].backdrop_path | imagen) +')' }">
+                    </div>
+                    <div [routerLink]="['/pelicula', ninnos[2].id]" class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url( '+ (ninnos[2].backdrop_path | imagen) +')' }">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6">
+
+
+                <div class="row">
+                    <div [routerLink]="['/pelicula', ninnos[3].id]" class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url( '+ (ninnos[3].backdrop_path | imagen) +')' }">
+                    </div>
+                    <div [routerLink]="['/pelicula', ninnos[4].id]" class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url( '+ (ninnos[4].backdrop_path | imagen) +')' }">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div [routerLink]="['/pelicula', ninnos[5].id]" class="col-md-12 div-pic-1" [ngStyle]="{ 'background-image': 'url( '+ (ninnos[5].backdrop_path | imagen) +')' }">
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </div>

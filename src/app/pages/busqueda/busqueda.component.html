@@ -1,0 +1,19 @@
+<br>
+<div class="container">
+    <h1>El resultado de tu busqueda: <strong>{{search}}</strong></h1>
+    <hr>
+    <br>
+    <div class="card-columns">
+        <div class="card" *ngFor="let resul of resultado">
+            <img [src]="resul.poster_path | imagen" class="card-img-top" [routerLink]="['/pelicula', resul.id]">
+            <div class="card-body">
+                <h5 [routerLink]="['/pelicula', resul.id]" class="card-title">{{resul.original_title}}</h5>
+                <hr>
+                <p class="card-text">Popularidad: <span> {{resul.popularity}}</span></p>
+                <p class="card-text">Votos: <span> {{resul.vote_average}}</span></p>
+                <p class="card-text">Popularidad: <span> {{resul.popularity}}</span></p>
+                <p class="card-text">Fecha de lanzamiento: <span>{{resul.release_date | date:'mediumDate'}}</span></p>
+            </div>
+        </div>
+    </div>
+</div>
